@@ -22,11 +22,11 @@ const AddToCartButton = ({ product, className }: Props) => {
             {itemCount ? (
                 <div className="w-full text-sm">
                     <div className="flex items-center justify-between">
-                        <span className="text-xs text-muted-foreground">Quantity</span>
+                        <span className="text-xs text-muted-foreground text-pink-600">Quantity</span>
                         <QuantityButtons product={product} />
                     </div>
-                    <div className="flex items-center justify-between border-t pt-1">
-                        <span className="text-xs font-semibold">Subtotal</span>
+                    <div className="flex items-center justify-between border-t pt-1 text-pink-900">
+                        <span className="text-xs font-semibold text-pink-500">Subtotal</span>
                         <PriceFormatter
                             amount={product?.price ? product?.price * itemCount : 0}
                         />
@@ -42,7 +42,7 @@ const AddToCartButton = ({ product, className }: Props) => {
                     }}
                     disabled={isOutOfStock}
                     className={cn(
-                        "w-full bg-transparent text-darkColor shadow-none border border-darkColor/30 font-semibold tracking-wide hover:text-white hoverEffect",
+                        "w-full bg-transparent text-pink-600 shadow-none border border-b font-semibold tracking-wide hover:bg-pink-600 hover:text-white hoverEffect",
                         className
                     )}
                 >
